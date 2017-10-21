@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  badger-mock-web:
+    volumes:
+      - .:/app
+    hostname: jetbrains.mock
+    networks:
+      devnet0:
+        aliases:
+          - jetbrains.mock
+    environment:
+      - FLASK_DEBUG=1
+
+networks:
+  devnet0:
+    external:
+      name: devnet0
