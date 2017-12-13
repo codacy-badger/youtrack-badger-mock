@@ -6,7 +6,7 @@ RUN rm -rf /var/cache && \
 WORKDIR /app
 
 COPY requirements.txt /app/requirements.txt
-COPY yb-mock /app
+COPY yb_mock /app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
